@@ -231,6 +231,11 @@ html, body {
     outline: none !important;
 }
 
+.body-pages-authentification .message-erreur {
+	font-size: small;
+	color: var(--rouge-cerise) !important;
+}
+
 .body-pages-authentification .bloc-gauche-ou-haut-de-couleur {
 	background: var(--rouge-cerise);
 	min-height: 100vh;
