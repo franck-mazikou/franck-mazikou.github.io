@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <!-- Balises des métadonnées de la page web -->
+        <meta charset = "UTF-8"/>
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge"/>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+
+        <title>Juste une rencontre</title>
+
+        <meta name = "description" content = "Juste une rencontre facilite des rencontres réelles et authentiques dans un cadre simple et sécurisé pour adultes."/>
+        <meta name = "robots" content = "index, follow"/>
+
+        <!-- Open Graph -->
+        <meta property = "og:title" content = "Juste une rencontre"/>
+        <meta property = "og:description" content = "Juste une rencontre facilite des rencontres réelles et authentiques dans un cadre simple et sécurisé pour adultes."/>
+        <meta property = "og:type" content = "website"/>
+        <meta property = "og:url" content = "https://justeunerencontre.com/saisir-le-code-d-identification"/>
+        <meta property = "og:image" content = "assets/img/image_open_graph.jpg"/>
+
+        <!-- Twitter (X) cards -->
+        <meta name = "twitter:card" content = "summary_large_image"/>
+        <meta name = "twitter:title" content = "Juste une rencontre"/>
+        <meta name = "twitter:description" content = "Juste une rencontre facilite des rencontres réelles et authentiques dans un cadre simple et sécurisé pour adultes."/>
+        <meta name = "twitter:image" content = "assets/img/image_open_graph.jpg"/>
+        <meta name = "twitter:url" content = "https://justeunerencontre.com/saisir-le-code-d-identification"/>
+
+        <!-- Feuilles de style CSS -->
+        <link rel = "stylesheet" href = "assets/css/bootstrap-icons.min.css"/>
+        <link rel = "stylesheet" href = "assets/css/bootstrap.min.css"/>
+        <link rel = "stylesheet" href = "assets/css/style.css"/>
+
+        <!-- Favicones de la plateforme -->
+        <link rel = "icon" href = "assets/img/favicon.ico"/>
+        <link rel = "icon" type = "image/svg+xml" href = "assets/img/favicon.svg"/>
+        <link rel = "icon" type = "image/png" sizes = "96x96" href = "assets/img/favicon-96x96.png"/>
+        <link rel = "apple-touch-icon" href = "assets/img/apple-touch-icon.png"/>
+    </head>
+
+    <body class = "body-pages-authentification">
+        <div class = "container-fluid">
+            <div class = "row min-vh-100 flex-column flex-lg-row">
+                <!-- Bloc de couleur de gauche avec image (Desktop) ou celui du haut (Mobile) -->
+                <div class = "col-lg-6 col-12 bloc-gauche-ou-haut-de-couleur d-flex justify-content-center align-items-center p-3">
+                    <img src = "assets/img/logo_de_couleur_blanche_de_la_plateforme_juste_une_rencontre.png" alt = "Logo de la plateforme Juste une rencontre" loading = "lazy" decoding = "async" class = "img-fluid"/>
+                </div>
+
+                <!--Bloc de formulaire de droite (Desktop) ou celui du bas (Mobile) -->
+                <div class = "col-lg-6 col-12 d-flex align-items-center py-3">
+                    <div class = "form-wrapper w-100 px-3">
+                        <h1 class = "fw-bold mb-2 montserrat-bold text-center text-md-start">Saisir le code d'identification</h1>
+                        <p class = "mb-4 poppins-light text-center text-md-start">Saisissez le code d'identification reçu via votre messagerie</p>
+
+                        <form class = "row g-3">
+                            <div class = "col-12">
+                                <label for = "code" class = "form-label visually-hidden">Code d'identification</label>
+                                <input type = "text" id = "code" class = "form-control poppins-light" placeholder = "Code d'identification" required/>
+                                
+                                <p class = "poppins-light mt-2 text-danger message-erreur">Le code d'identification est invalide</p>
+                                
+                                <p class = "poppins-light mt-3"><a href = "connexion.html" data-bs-toggle = "tooltip" data-bs-placement = "top" title = "Connectez-vous si vous vous souvenez de votre mot de passe">Connectez-vous maintenant</a></p>
+                            </div>
+
+                            <div class = "col-12 mt-4 text-end">
+                                <button type = "submit" class = "btn btn-primary px-4 mt-2 poppins-light button-de-couleur-bleu">Confirmer mon identité</button>
+                            </div>
+
+                            <div class = "col-12 mt-4">
+                                <p class = "text-center poppins-light paragraphe-de-confirmation">
+                                    En utilisant ce site, vous confirmez avoir pris 
+                                    <a href = "a_propos_de_nous.html" target = "_blank" rel = "noopener noreferrer" data-bs-toggle = "tooltip" data-bs-placement = "top" title = "En savoir plus sur la plateforme">connaissance des informations</a>, 
+                                    acceptez les <a href = "conditions_generales_d_utilisation.html" target = "_blank" rel = "noopener noreferrer" data-bs-toggle = "tooltip" data-bs-placement = "top" title = "Lire nos conditions générales d'utilisation">conditions d’utilisation</a> 
+                                    et la <a href = "politique_de_confidentialite.html" target = "_blank" rel = "noopener noreferrer" data-bs-toggle = "tooltip" data-bs-placement = "top" title = "Lire notre politique de confidentialité">politique de confidentialité</a>, 
+                                    et certifiez avoir au moins 18 ans.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS Bundle -->
+        <script src = "assets/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Script Javascipt -->
+        <script src = "assets/js/script_des_infobulles.js"></script>
+    </body>
+</html>
