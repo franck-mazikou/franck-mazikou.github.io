@@ -47,9 +47,16 @@
 	--bleu-nuit-transparent:  rgba(29, 59, 124, 0.25);
 	--fuchsia-clair-transparent: rgba(215, 11, 87, 0.25);
 	--noir-pur: #000000;
+    --noir-transparent: rgba(0,0,0,0.2);
 	--gris-clair: #F0F0F0;
+    --gris-fonce: #E4E6EB;
 	--bleu-nuit: #1D3B7C;
 	--bleu-marine-fonce: #172F65;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gris-clair) transparent;
 }
 
 html, body {
@@ -66,6 +73,48 @@ html, body {
 
     --bs-tooltip-bg: var(--bleu-nuit);
     --bs-tooltip-color: var(--blanc-pur);
+}
+
+.image-drapeau-de-pays {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid var(--blanc-pur);
+    object-fit: cover;
+}
+
+.bouton-de-fermeture {
+    background-color: var(--blanc-pur);
+    border: none;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--rouge-cerise);
+    box-shadow: 0 3px 8px var(--noir-transparent);
+    transition: all 0.2s ease;
+}
+
+.bouton-de-fermeture:hover {
+    background-color: var(--rouge-cerise);
+    color: var(--blanc-pur);
+    transform: scale(1.1);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--gris-clair), var(--gris-fonce));
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--gris-fonce), var(--gris-clair));
 }
 
 /* Style de la page de chargement */
@@ -265,5 +314,471 @@ html, body {
 	.body-pages-authentification .bloc-gauche-ou-haut-de-couleur img {
 		max-width: 140px;
 	}
+
+}
+
+/* Style des pages post connexion */
+
+.body-pages-post-connexion {
+    background-color: var(--blanc-pur);
+}
+
+.body-pages-post-connexion p {
+	hyphens: auto;
+}
+
+.body-pages-post-connexion .paragraphe-des-liens-juridiques a:hover {
+	text-decoration: underline !important;
+	cursor: pointer;
+}
+
+.body-pages-post-connexion .badge {
+    background-color: var(--bleu-nuit);
+}
+
+.body-pages-post-connexion .bi-patch-check-fill {
+    color: var(--bleu-nuit);
+}
+
+/* Blocs latéraux (Gauche et droit) */
+
+.body-pages-post-connexion .bloc-de-cote-gauche, .body-pages-post-connexion .bloc-de-cote-droit {
+    background: var(--blanc-pur);
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid var(--gris-clair);
+}
+
+.body-pages-post-connexion .bloc-de-cote-droit {
+    border-right: none;
+    border-left: 1px solid var(--gris-clair);
+}
+
+/* Bloc de la photo de profil */
+
+.body-pages-post-connexion .bloc-de-la-photo-de-profil {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.body-pages-post-connexion .bloc-de-la-photo-de-profil .photo-de-profil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Liens de navigation */
+
+.body-pages-post-connexion .bloc-de-cote-gauche .lien-de-navigation {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: var(--gris-clair);
+    color: var(--noir-pur);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.body-pages-post-connexion .bloc-de-cote-gauche .lien-de-navigation:hover {
+    background: var(--gris-fonce);
+}
+
+.body-pages-post-connexion .bloc-de-cote-gauche .lien-de-navigation.active {
+    background: var(--rouge-cerise);
+    color: var(--blanc-pur) !important;
+}
+
+.body-pages-post-connexion .bloc-de-cote-droit .bloc-de-suggestion {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.body-pages-post-connexion .bloc-de-cote-droit .bloc-de-suggestion .image-du-bloc-de-suggestion {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.body-pages-post-connexion .bloc-de-cote-droit .bloc-de-suggestion:hover .image-du-bloc-de-suggestion {
+    transform: scale(1.05);
+}
+
+.body-pages-post-connexion .bloc-de-cote-droit .bloc-de-suggestion .bloc-d-information-du-bloc-de-suggestion {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, var(--rouge-cerise));
+}
+
+.body-pages-post-connexion .point-de-pagination {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background: var(--gris-fonce);
+    display: inline-block;
+}
+
+.body-pages-post-connexion .point-de-pagination.active {
+    background: var(--bleu-nuit);
+}
+
+@media (max-width: 991px) {
+
+    .body-pages-post-connexion .bloc-de-cote-gauche, .body-pages-post-connexion .bloc-de-cote-droit {
+        display: none !important;
+    }
+
+    .body-pages-post-connexion .section-du-milieu {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+}
+
+/* Blocs d'images (Explotetris) */
+
+.body-pages-post-connexion .section-du-milieu .bloc-image-large, .body-pages-post-connexion .section-du-milieu .bloc-image-medium {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.body-pages-post-connexion .section-du-milieu .bloc-image-large {
+    aspect-ratio: 4 / 3;
+}
+
+.body-pages-post-connexion .section-du-milieu .bloc-image-medium {
+    aspect-ratio: 4 / 3;
+}
+
+.body-pages-post-connexion .section-du-milieu .bloc-image-large > img, .body-pages-post-connexion .section-du-milieu .bloc-image-medium > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.body-pages-post-connexion .section-du-milieu .bloc-image-large:hover > img, .body-pages-post-connexion .section-du-milieu .bloc-image-medium:hover > img {
+    transform: scale(1.07);
+    filter: brightness(0.85);
+    cursor: pointer;
+}
+
+.body-pages-post-connexion .section-du-milieu .overlay-vertical-des-blocs-images {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    z-index: 2;
+    color: var(--blanc-pur);
+    pointer-events: none;
+}
+
+/* En-tete des écrans mobiles */
+
+.body-pages-post-connexion .en-tete-des-ecrans-mobile {
+    height: 60px; 
+    z-index: 1050;
+}
+
+.body-pages-post-connexion .en-tete-des-ecrans-mobile a {
+    color: var(--noir-pur);
+}
+
+.body-pages-post-connexion .en-tete-des-ecrans-mobile .bloc-de-la-photo-de-profil {
+    width: 40px;
+    height: 40px;
+}
+
+.body-pages-post-connexion .en-tete-des-ecrans-mobile .bloc-de-la-photo-de-profil img {
+    object-fit:cover;
+}
+
+@media (max-width: 991px) {
+
+    .body-pages-post-connexion {
+        padding-bottom: 70px;
+        padding-top: 60px;
+    }
+
+    .body-pages-post-connexion nav.position-fixed.bottom-0 {
+        z-index: 1100;
+    }
+
+    .body-pages-post-connexion .section-du-milieu .bloc-image-large, .body-pages-post-connexion .section-du-milieu  .bloc-image-medium {
+        border-radius: 18px;
+        overflow: hidden;
+        aspect-ratio: 4/5;
+    }
+
+    .body-pages-post-connexion .section-du-milieu .bloc-image-large > img, .body-pages-post-connexion .section-du-milieu .bloc-image-medium > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .body-pages-post-connexion .barre-de-navigation-pour-mobile {
+        z-index: 1100;
+    }
+
+    .body-pages-post-connexion .barre-de-navigation-pour-mobile .icone-de-navigation, .body-pages-post-connexion .en-tete-des-ecrans-mobile a {
+        width: 46px;
+        height: 46px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: var(--noir-pur);
+        background: transparent;
+        transition: all 0.25s ease;
+        text-decoration: none;
+        position: relative;
+        border: 1px solid var(--noir-transparent);
+    }
+
+    .body-pages-post-connexion .barre-de-navigation-pour-mobile .icone-de-navigation:not(.active):hover, .body-pages-post-connexion .en-tete-des-ecrans-mobile a:hover  {
+        background-color: var(--gris-fonce);
+    }
+
+    .body-pages-post-connexion .barre-de-navigation-pour-mobile .icone-de-navigation.active {
+        background-color: var(--rouge-cerise);
+        color: var(--blanc-pur);
+        border: none;
+    }
+
+    .body-pages-post-connexion .barre-de-navigation-pour-mobile .icone-de-navigation.active i {
+        color: var(--blanc-pur);
+    }
+
+    .body-pages-post-connexion .barre-de-navigation-pour-mobile .badge {
+        position: absolute;
+        top: -4px;
+        right: -6px;
+        background: var(--bleu-nuit);
+        color: var(--blanc-pur);
+        font-size: 10px;
+        padding: 3px 6px;
+        border-radius: 50px;
+        line-height: 1;
+        box-shadow: 0 0 0 2px var(--blanc-pur);
+    }
+
+}
+
+/* Style du menu complémentaire */
+
+.body-pages-post-connexion .offcanvas {
+    z-index: 1200;
+}
+
+.body-pages-post-connexion .offcanvas-body .body-pages-post-connexion {
+    background-color: var(--blanc-pur);
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body-pages-post-connexion .offcanvas-body .lien-de-navigation {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: var(--gris-clair);
+    color: var(--noir-pur);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.body-pages-post-connexion .offcanvas-body .lien-de-navigation:hover {
+    background: var(--gris-fonce);
+}
+
+.body-pages-post-connexion .offcanvas-body .lien-de-navigation.active {
+    background: var(--rouge-cerise);
+    color: var(--blanc-pur) !important;
+}
+
+.body-pages-post-connexion .offcanvas-body .bloc-de-la-photo-de-profil {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.body-pages-post-connexion .offcanvas-body .bloc-de-la-photo-de-profil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body-pages-post-connexion .offcanvas-body .badge {
+    background-color: var(--bleu-nuit);
+}
+
+/* Style du modal d'informations du profil */
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .paragraphe-de-la-biographie {
+    text-align: justify;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-dialog {
+    max-width: 500px;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-content {
+    border-radius: 18px;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-image-wrapper {
+    height: 300px;
+    overflow: hidden;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-overlay-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(transparent, var(--rouge-cerise));
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .bouton-de-fermeture-modal {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .badge-profil {
+    background: var(--gris-fonce);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .btn-action-modal {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bleu-nuit);
+    color: var(--blanc-pur);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease;
+}
+
+.body-pages-post-connexion .bloc-modal-d-informations-du-profil .btn-action-modal:hover {
+    background: var(--bleu-marine-fonce);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+    .body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-image-wrapper {
+        height: 250px;
+    }
+
+    .body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-dialog {
+        margin: 10px;
+    }
+
+}
+
+/* Style des skeletons des pages post connexion */
+
+.body-pages-post-connexion .skeleton {
+    position: relative;
+    overflow: hidden;
+    background: var(--gris-fonce);
+    border-radius: 20px;
+}
+
+.body-pages-post-connexion .skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    height: 100%;
+    width: 150%;
+    background: linear-gradient(90deg, transparent, var(--gris-clair), transparent);
+    animation: shimmer 1.3s infinite;
+}
+
+@keyframes shimmer {
+
+    100% { 
+        left: 150%; 
+    }
+    
+}
+
+/* Style des skeletons de la page Explotetris (Tetris) */
+
+.body-pages-post-connexion .skeleton-image {
+    aspect-ratio: 4/3;
+}
+
+@media (max-width: 991px) {
+
+    .body-pages-post-connexion .skeleton-image {
+        aspect-ratio: 4/5;
+    }
+
+}
+
+/* Style des skeletons suggestions */
+
+.body-pages-post-connexion .skeleton-suggestion {
+    height: 180px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+.body-pages-post-connexion .fade-in {
+    animation: fadeInSmooth 0.5s ease forwards;
+}
+
+@keyframes fadeInSmooth {
+
+    from { 
+        opacity: 0; 
+        transform: translateY(10px);
+    }
+
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 
 }
