@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <!-- Balises des métadonnées de la page web -->
+        <meta charset = "UTF-8"/>
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge"/>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+
+        <title>Juste une rencontre</title>
+
+        <meta name = "description" content = "Juste une rencontre facilite des rencontres réelles et authentiques dans un cadre simple et sécurisé pour adultes."/>
+        <meta name = "robots" content = "index, follow"/>
+
+        <!-- Open Graph -->
+        <meta property = "og:title" content = "Juste une rencontre"/>
+        <meta property = "og:description" content = "Juste une rencontre facilite des rencontres réelles et authentiques dans un cadre simple et sécurisé pour adultes."/>
+        <meta property = "og:type" content = "website"/>
+        <meta property = "og:url" content = "https://justeunerencontre.com/explotetris"/>
+        <meta property = "og:image" content = "assets/img/image_open_graph.jpg"/>
+
+        <!-- Twitter (X) cards -->
+        <meta name = "twitter:card" content = "summary_large_image"/>
+        <meta name = "twitter:title" content = "Juste une rencontre"/>
+        <meta name = "twitter:description" content = "Juste une rencontre facilite des rencontres réelles et authentiques dans un cadre simple et sécurisé pour adultes."/>
+        <meta name = "twitter:image" content = "assets/img/image_open_graph.jpg"/>
+        <meta name = "twitter:url" content = "https://justeunerencontre.com/explotetris"/>
+
+        <!-- Feuilles de style CSS -->
+        <link rel = "stylesheet" href = "assets/css/bootstrap-icons.min.css"/>
+        <link rel = "stylesheet" href = "assets/css/bootstrap.min.css"/>
+        <link rel = "stylesheet" href = "assets/css/style.css"/>
+
+        <!-- Favicones de la plateforme -->
+        <link rel = "icon" href = "assets/img/favicon.ico"/>
+        <link rel = "icon" type = "image/svg+xml" href = "assets/img/favicon.svg"/>
+        <link rel = "icon" type = "image/png" sizes = "96x96" href = "assets/img/favicon-96x96.png"/>
+        <link rel = "apple-touch-icon" href = "assets/img/apple-touch-icon.png"/>
+    </head>
+
+    <body class = "body-pages-post-connexion">
+        <!-- En-tete des écrans de smartphones -->
+        <header class = "en-tete-des-ecrans-mobile d-flex d-lg-none align-items-center justify-content-between px-3 bg-white border-bottom position-fixed top-0 start-0 end-0">
+            <h5 class = "mb-0 fw-bold montserrat-bold">Explotetris</h5>
+
+            <div class = "d-flex align-items-center gap-3">
+                <a href = "recherche.html" class = "text-decoration-none">
+                    <i class = "bi bi-search fs-5"></i>
+                </a>
+
+                <!-- Photo de profil -->
+                <div class = "rounded-circle overflow-hidden bloc-de-la-photo-de-profil">
+                    <a href = "mon_profil.html" class = "text-decoration-none">
+                        <img src = "assets/img/image_membre_2.webp" alt = "Photo de profil" class = "w-100 h-100" loading = "lazy" decoding = "async"/>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class = "container-fluid">
+            <div class = "row">
+                <!-- Bloc de coté gauche -->
+                <aside class = "col-lg-3 position-fixed top-0 start-0 vh-100 bloc-de-cote-gauche d-none d-lg-flex flex-column">
+                    <header class = "mb-4">
+                        <div class = "bloc-de-la-photo-de-profil">
+                            <a href = "mon_profil.html" class = "text-decoration-none">
+                                <img src = "assets/img/image_membre_2.webp" alt = "Photo de profil" class = "photo-de-profil" loading = "lazy" decoding = "async"/>
+                            </a>
+                        </div>
+
+                        <div class = "bloc-d-information-du-membre">
+                            <h6 class = "mt-3 mb-0 montserrat-bold">MAZIKOU Franck Souverain</h6>
+
+                            <small class = "text-muted poppins-light">
+                                @mazikou_franck <i class = "bi bi-patch-check-fill"></i>
+                            </small>
+                        </div>
+                    </header>
+
+                    <nav class = "flex-column">
+                        <a href = "explotetris.html" class = "lien-de-navigation active poppins-light">
+                            <i class = "bi bi-grid-fill me-2"></i> Explotetris
+                        </a>
+
+                        <a href = "recherche.html" class = "lien-de-navigation poppins-light">
+                            <i class = "bi bi-search me-2"></i> Recherche
+                        </a>
+
+                        <a href = "discussions.html" class = "lien-de-navigation d-flex justify-content-between align-items-center poppins-light">
+                            <span><i class = "bi bi-chat-dots-fill me-2"></i> Discussions</span>
+                            <span class = "badge rounded-pill">2</span>
+                        </a>
+
+                        <a href = "rencontres.html" class = "lien-de-navigation d-flex justify-content-between align-items-center poppins-light">
+                            <span><i class = "bi bi-people-fill me-2"></i> Rencontres</span>
+                            <span class = "badge rounded-pill">1</span>
+                        </a>
+
+                        <a href = "notifications.html" class = "lien-de-navigation d-flex justify-content-between align-items-center poppins-light">
+                            <span><i class = "bi bi-bell-fill me-2"></i> Notifications</span>
+                            <span class = "badge rounded-pill">1</span>
+                        </a>
+
+                        <a href="#" class="lien-de-navigation poppins-light" data-bs-toggle="offcanvas" data-bs-target="#menu-complementaire">
+                            <i class="bi bi-plus me-2"></i> Voir plus
+                        </a>
+                    </nav>
+
+                    <footer class = "mt-auto pt-4 text-center">
+                        <small class = "text-muted poppins-light">© 2026 Juste une rencontre</small>
+                    </footer>
+                </aside>
+
+                <!-- Section du milieu des images (Explotetris) -->
+                <main class = "col-12 col-lg-6 offset-lg-3 p-4 section-du-milieu">
+                    <section class = "container-fluid p-0">
+                        <!-- Skeleton -->
+                        <div id = "skeleton-explotetris" class = "row g-2">
+                            <div class = "col-6 col-lg-3"><div class = "skeleton skeleton-image w-100"></div></div>
+                            <div class = "col-6 col-lg-3"><div class = "skeleton skeleton-image w-100"></div></div>
+                            <div class = "col-12 col-lg-6"><div class = "skeleton skeleton-image w-100"></div></div>
+                            <div class = "col-6 col-lg-3"><div class = "skeleton skeleton-image w-100"></div></div>
+                            <div class = "col-6 col-lg-3"><div class = "skeleton skeleton-image w-100"></div></div>
+                            <div class = "col-12 col-lg-6"><div class = "skeleton skeleton-image w-100"></div></div>
+                        </div>
+
+                        <!-- Contenu après chargement -->
+                        <div id = "contenu-explotetris" class = "row g-2 d-none fade-in">
+                            <!-- Bloc d'image medium -->
+                            <div class = "col-6 col-lg-3 d-flex">
+                                <div class = "bloc-image-medium w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_1.webp" class = "img-fluid" alt = "Image membre 1" loading = "lazy" decoding = "async"/>
+                                    
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <img src = "assets/img/drapeau_de_la_republique_du_congo.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République du Congo" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image medium -->
+                            <div class = "col-6 col-lg-3 d-flex">
+                                <div class = "bloc-image-medium w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_2.webp" class = "img-fluid" alt = "Image membre 2" loading = "lazy" decoding = "async"/>
+                                    
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <i class = "bi bi-patch-check-fill text-white"></i>
+
+                                        <img src = "assets/img/drapeau_de_la_republique_francaise.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République Française" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image large -->
+                            <div class = "col-12 col-lg-6 d-flex">
+                                <div class = "bloc-image-large w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_3.jpeg" class = "img-fluid" alt = "Image membre 3" loading = "lazy" decoding = "async"/>
+
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <i class = "bi bi-patch-check-fill text-white"></i>
+
+                                        <img src = "assets/img/drapeau_de_la_republique_francaise.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République Française" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image medium -->
+                            <div class = "col-6 col-lg-3 d-flex">
+                                <div class = "bloc-image-medium w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_1.webp" class = "img-fluid" alt = "Image membre 1" loading = "lazy" decoding = "async"/>
+                                    
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <img src = "assets/img/drapeau_de_la_republique_du_congo.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République du Congo" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image medium -->
+                            <div class = "col-6 col-lg-3 d-flex">
+                                <div class = "bloc-image-medium w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_4.jpg" class = "img-fluid" alt = "Image membre 2" loading = "lazy" decoding = "async"/>
+                                    
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <i class = "bi bi-patch-check-fill text-white"></i>
+
+                                        <img src = "assets/img/drapeau_de_la_republique_francaise.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République Française" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image large -->
+                            <div class = "col-12 col-lg-6 d-flex">
+                                <div class = "bloc-image-large w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_5.webp" class = "img-fluid" alt = "Image membre 3" loading = "lazy" decoding = "async"/>
+
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <i class = "bi bi-patch-check-fill text-white"></i>
+
+                                        <img src = "assets/img/drapeau_de_la_republique_francaise.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République Française" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image large -->
+                            <div class = "col-12 col-lg-6 d-flex">
+                                <div class = "bloc-image-large w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_3.jpeg" class = "img-fluid" alt = "Image membre 3" loading = "lazy" decoding = "async"/>
+
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <i class = "bi bi-patch-check-fill text-white"></i>
+
+                                        <img src = "assets/img/drapeau_de_la_republique_francaise.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République Française" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image medium -->
+                            <div class = "col-6 col-lg-3 d-flex">
+                                <div class = "bloc-image-medium w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_2.webp" class = "img-fluid" alt = "Image membre 2" loading = "lazy" decoding = "async"/>
+                                    
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <i class = "bi bi-patch-check-fill text-white"></i>
+
+                                        <img src = "assets/img/drapeau_de_la_republique_francaise.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République Française" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc d'image medium -->
+                            <div class = "col-6 col-lg-3 d-flex">
+                                <div class = "bloc-image-medium w-100" data-bs-toggle = "modal" data-bs-target = "#bloc-modal-d-informations-du-profil-1">
+                                    <img src = "assets/img/image_membre_2.webp" class = "img-fluid" alt = "Image membre 2" loading = "lazy" decoding = "async"/>
+                                    
+                                    <div class = "overlay-vertical-des-blocs-images d-flex flex-column align-items-center justify-content-center">
+                                        <i class = "bi bi-patch-check-fill text-white"></i>
+
+                                        <img src = "assets/img/drapeau_de_la_republique_francaise.png" class = "image-drapeau-de-pays mb-2" alt = "Drapeau de la République Française" loading = "lazy" decoding = "async"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <!-- Bloc de coté droit -->
+                <aside class = "col-lg-3 position-fixed top-0 end-0 vh-100 bloc-de-cote-droit d-none d-md-block">
+                    <h6 class = "mb-4 montserrat-bold">Suggestions des membres</h6>
+
+                    <!-- Skeleton -->
+                    <div id = "skeleton-suggestions">
+                        <div class = "skeleton skeleton-suggestion w-100"></div>
+                        <div class = "skeleton skeleton-suggestion w-100"></div>
+                    </div>
+
+                    <!-- Contenu réel des suggestions -->
+                    <div id = "contenu-suggestions" class = "d-none fade-in">
+                        <!-- Bloc de suggestion -->
+                        <div class = "bloc-de-suggestion">
+                            <img src = "assets/img/image_membre_3.jpeg" alt = "Samba Lory Jessica" class = "image-du-bloc-de-suggestion" loading = "lazy" decoding = "async"/>
+                            
+                            <div class = "bloc-d-information-du-bloc-de-suggestion">
+                                <div class = "d-flex align-items-center gap-2 mt-2">
+                                    <img src = "assets/img/drapeau_de_la_republique_francaise.png" alt = "République Française" class = "image-drapeau-de-pays" loading = "lazy" decoding = "async"/>
+                                    <span class = "poppins-light text-white small">Samba Lory Jessica</span>
+                                    <i class = "bi bi-patch-check-fill text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bloc de suggestion -->
+                        <div class = "bloc-de-suggestion">
+                            <img src = "assets/img/image_membre_4.jpg" alt = "Samba Lory Jessica" class = "image-du-bloc-de-suggestion" loading = "lazy" decoding = "async"/>
+                            
+                            <div class = "bloc-d-information-du-bloc-de-suggestion">
+                                <div class = "d-flex align-items-center gap-2 mt-2">
+                                    <img src = "assets/img/drapeau_de_la_republique_francaise.png" alt = "République Française" class = "image-drapeau-de-pays" loading = "lazy" decoding = "async"/>
+                                    <span class = "poppins-light text-white small">Ichels Vanessa Gloria</span>
+                                    <i class = "bi bi-patch-check-fill text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class = "mt-5 text-center">
+                            <div class = "mb-3">
+                                <span class = "point-de-pagination active"></span>
+                                <span class = "point-de-pagination"></span>
+                                <span class = "point-de-pagination"></span>
+                            </div>
+
+                            <p class = "small text-muted poppins-light paragraphe-des-liens-juridiques">
+                                <a href = "a_propos_de_nous.html" class = "text-decoration-none text-muted" target = "_blank" rel = "noopener noreferrer">À propos de nous</a> •
+                                <a href = "conditions_generales_d_utilisation.html" class = "text-decoration-none text-muted" target = "_blank" rel = "noopener noreferrer">Conditions générales d'utilisation</a> •
+                                <a href = "politique_de_confidentialite.html" class = "text-decoration-none text-muted" target = "_blank" rel = "noopener noreferrer">Politique de confidentialité</a>
+                            </p>
+                        </footer>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Barre de navigation sur les petits écrans -->
+        <nav class = "barre-de-navigation-pour-mobile d-lg-none position-fixed bottom-0 start-0 end-0 bg-white border-top">
+            <div class = "d-flex justify-content-around align-items-center py-3">
+                <a href = "explotetris.html" class = "icone-de-navigation active">
+                    <i class = "bi bi-grid-fill"></i>
+                </a>
+
+                <a href = "discussions.html" class = "icone-de-navigation has-badge">
+                    <i class = "bi bi-chat-dots-fill"></i>
+                    <span class = "badge">2</span>
+                </a>
+
+                <a href = "rencontres.html" class = "icone-de-navigation has-badge">
+                    <i class = "bi bi-people-fill"></i>
+                    <span class = "badge">1</span>
+                </a>
+
+                <a href = "notifications.html" class = "icone-de-navigation has-badge">
+                    <i class = "bi bi-bell-fill"></i>
+                    <span class = "badge">1</span>
+                </a>
+
+                <a href = "#" class = "icone-de-navigation" data-bs-toggle = "offcanvas" data-bs-target = "#menu-complementaire">
+                    <i class = "bi bi-plus-circle-fill"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Menu complémentaire de gauche -->
+        <div class = "offcanvas offcanvas-start border-0" tabindex = "-1" id = "menu-complementaire" aria-labelledby = "menu-complementaire-label" style="width: 350px;">
+            <div class = "offcanvas-header justify-content-end">
+                <button type = "button" class = "bouton-de-fermeture" data-bs-dismiss = "offcanvas" aria-label = "Close">
+                    <i class = "bi bi-x"></i>
+                </button>
+            </div>
+
+            <div class = "offcanvas-body pt-0">
+                <div class = "mb-4">
+                    <div class = "bloc-de-la-photo-de-profil position-relative">
+                        <a href = "mon_profil.html" class = "text-decoration-none">
+                            <img src = "assets/img/image_membre_2.webp" alt = "Photo de profil" class = "photo-de-profil" loading = "lazy" decoding = "async"/>
+                        </a>
+                    </div>
+
+                    <div class = "bloc-d-information-du-membre mt-3">
+                        <h6 class = "mb-0 fw-bold montserrat-bold">MAZIKOU Franck Souverain</h6>
+                        <small class = "text-muted poppins-light">@mazikou_franck <i class = "bi bi-patch-check-fill"></i></small>
+                    </div>
+                </div>
+
+                <!-- Liens de navigation -->
+                <nav class = "flex-column">
+                    <a href = "mon_profil.html" class = "lien-de-navigation poppins-light d-flex align-items-center">
+                        <i class = "bi bi-person-circle me-2"></i> Mon profil
+                    </a>
+
+                    <a href = "acces_du_compte.html" class = "lien-de-navigation poppins-light d-flex align-items-center">
+                        <i class = "bi bi-file-earmark-text me-2"></i> Accès du compte
+                    </a>
+
+                    <a href = "mon_album_photos.html" class = "lien-de-navigation poppins-light d-flex align-items-center">
+                        <i class = "bi bi-images me-2"></i> Album photos
+                    </a>
+
+                    <a href = "litiges.html" class = "lien-de-navigation poppins-light d-flex align-items-center justify-content-between">
+                        <span><i class = "bi bi-hourglass-split me-2"></i> Litiges</span>
+                        <span class = "badge rounded-pill">2</span>
+                    </a>
+
+                    <a href = "portefeuille.html" class = "lien-de-navigation poppins-light d-flex align-items-center">
+                        <i class = "bi bi-wallet2 me-2"></i> Portefeuille électronique
+                    </a>
+
+                    <a href = "transactions.html" class = "lien-de-navigation poppins-light d-flex align-items-center">
+                        <i class = "bi bi-arrow-repeat me-2"></i> Mes transactions
+                    </a>
+
+                    <a href = "certification_d_identite.html" class = "lien-de-navigation poppins-light d-flex align-items-center">
+                        <i class = "bi bi-person-badge me-2"></i> Certification d'identité
+                    </a>
+
+                    <a href = "connexion.html" class = "lien-de-navigation poppins-light d-flex align-items-center text-dark">
+                        <i class = "bi bi-box-arrow-left me-2"></i> Déconnexion
+                    </a>
+                </nav>
+
+                <div class = "mt-5 pt-4 text-center border-top">
+                    <p class = "small text-muted poppins-light paragraphe-des-liens-juridiques">
+                        <a href = "a_propos_de_nous.html" class = "text-decoration-none text-muted" target = "_blank" rel = "noopener noreferrer">À propos de nous</a> •
+                        <a href = "conditions_generales_d_utilisation.html" class = "text-decoration-none text-muted" target = "_blank" rel = "noopener noreferrer">Conditions générales d'utilisation</a> •
+                        <a href = "politique_de_confidentialite.html" class = "text-decoration-none text-muted" target = "_blank" rel = "noopener noreferrer">Politique de confidentialité</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal contextuel du profil -->
+        <div class = "modal fade bloc-modal-d-informations-du-profil" id = "bloc-modal-d-informations-du-profil-1" tabindex = "-1" aria-hidden = "true">
+            <div class = "modal-dialog modal-dialog-centered modal-md">
+                <div class = "modal-content border-0 rounded-4 overflow-hidden">
+                    <div class = "modal-body p-0 position-relative">
+                        <button type = "button" class = "bouton-de-fermeture bouton-de-fermeture-modal" data-bs-dismiss = "modal">
+                            <i class = "bi bi-x"></i>
+                        </button>
+
+                        <div class = "modal-image-wrapper position-relative">
+                            <img src = "assets/img/image_membre_1.webp" alt = "Samba Lory Jessica" class = "w-100 modal-image" loading = "lazy" decoding = "async"/>
+
+                            <div class = "modal-overlay-info">
+                                <div class = "d-flex align-items-center gap-3">
+                                    <img src = "assets/img/drapeau_de_la_republique_du_congo.png" class = "image-drapeau-de-pays" alt = "Drapeau de la République du Congo" loading = "lazy" decoding = "async"/>
+
+                                    <h6 class = "mb-0 text-white montserrat-bold">
+                                        Samba Lory Jessica
+                                        <i class = "bi bi-patch-check-fill text-white ms-1"></i>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "p-4">
+                            <p class = "poppins-light small paragraphe-de-la-biographie">Je m'appelle Samba Lory Jessica. Je suis une personne de genre féminin et d’orientation hétérosexuelle. Je réside actuellement en République du Congo, dans la ville de Brazzaville.</p>
+
+                            <div class = "d-flex justify-content-center flex-wrap gap-2 mb-4 d-none d-md-flex">
+                                <span class = "badge-profil">
+                                    <i class = "bi bi-gender-female me-1"></i> Féminin
+                                </span>
+
+                                <span class = "badge-profil">
+                                    <i class = "bi bi-heart me-1"></i> Hétérosexuelle
+                                </span>
+
+                                <span class = "badge-profil">
+                                    <i class = "bi bi-geo-alt me-1"></i> Brazzaville
+                                </span>
+                            </div>
+
+                            <div class = "d-flex justify-content-center gap-4 pb-2">
+                                <button class = "btn-action-modal">
+                                    <i class = "bi bi-chat-dots-fill"></i>
+                                </button>
+
+                                <button class = "btn-action-modal">
+                                    <i class = "bi bi-people-fill"></i>
+                                </button>
+
+                                <button class = "btn-action-modal">
+                                    <i class = "bi bi-images"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS Bundle -->
+        <script src = "assets/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Script des skeletons -->
+        <script src = "assets/js/script_skeleton.js"></script>
+    </body>
+</html>
