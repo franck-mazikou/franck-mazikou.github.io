@@ -60,6 +60,10 @@
     scrollbar-color: var(--gris-clair) transparent;
 }
 
+p {
+    hyphens: auto;
+}
+
 html, body {
   	overflow-x: hidden;
     margin: 0;
@@ -77,6 +81,17 @@ html, body {
     --bs-tooltip-color: var(--blanc-pur);
 }
 
+.dropzone {
+    border: 1px solid var(--noir-pur) !important;
+    border-style: dashed !important;
+}
+
+.dropzone .dz-preview .dz-image {
+    border-radius: 0px !important;
+}
+
+/* Style de la barre de navigation */
+
 .offcanvas-backdrop {
     z-index: 30;
 }
@@ -92,6 +107,391 @@ html, body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, var(--gris-fonce), var(--gris-clair));
+}
+
+/* Style des champs de formulaire */
+
+.form-control, .form-select {
+	padding: 14px;
+	border-radius: 10px;
+    border: 0.1px solid var(--gris-clair);
+    box-shadow: none;
+}
+
+.form-control:focus, .form-select:focus {
+    border: 0.1px solid var(--bleu-marine-fonce);
+    box-shadow: none;
+    outline: none;
+}
+
+.bootstrap-select:not(.input-group-btn) {
+    border: 0.1px solid var(--gris-clair) !important;
+	padding: 10px !important;
+}
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    font-family: 'Poppins', system-ui, sans-serif !important;
+    font-weight: 300 !important;
+    color: var(--noir-pur) !important;
+}
+
+.bootstrap-select .dropdown-toggle {
+    background-color: var(--blanc-pur) !important;
+    color: var(--noir-pur) !important;
+    border: none !important;
+}
+
+.bootstrap-select .dropdown-toggle:active, .bootstrap-select .dropdown-toggle:focus {
+    outline: none !important;
+}
+
+.message-erreur {
+	font-size: small;
+	color: var(--rouge-cerise) !important;
+}
+
+/* Style de la fenetre-contextuelle */
+
+.fenetre-contextuelle {
+    border-radius: 20px;
+    border: none;
+}
+
+.fenetre-contextuelle .bouton-de-gauche {
+    background-color: var(--gris-clair);
+    color: var(--noir-pur);
+    text-decoration: none;
+  	border-radius: 100px;
+  	padding: 8px 6px;
+  	border: none;
+    transition: 0.3s ease;
+}
+
+.fenetre-contextuelle .bouton-de-gauche:hover, .fenetre-contextuelle .bouton-de-gauche:focus  {
+    background-color: var(--noir-transparent) !important;
+    color: var(--noir-pur) !important;
+}
+
+.fenetre-contextuelle .bouton-de-droit {
+    background-color: var(--rouge-cerise);
+    color: var(--blanc-pur);
+  	border-radius: 100px;
+    text-decoration: none;
+  	padding: 8px 6px;
+  	border: none;
+    transition: 0.3s ease;
+}
+
+.fenetre-contextuelle .bouton-de-droit:hover, .fenetre-contextuelle .bouton-de-droit:focus {
+    background-color: var(--rouge-cerise-fonce) !important;
+    color: var(--blanc-pur) !important;
+}
+
+.fenetre-contextuelle .image-de-reference > img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Style des différents boutons */
+
+.bouton-de-visibilite-du-mot-de-passe {
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+    transition: 0.3s ease;
+
+	/* Variables Bootstrap surchargées */
+
+	--bs-btn-color: var(--bleu-marine-fonce);
+    --bs-btn-border-color: var(--bleu-marine-fonce);
+    --bs-btn-hover-color: var(--blanc-pur);
+    --bs-btn-hover-bg: var(--bleu-marine-fonce);
+    --bs-btn-hover-border-color: var(--bleu-marine-fonce);
+    --bs-btn-active-color: var(--blanc-pur);
+    --bs-btn-active-bg: var(--bleu-marine-fonce);
+    --bs-btn-active-border-color: var(--bleu-marine-fonce);
+    --bs-btn-disabled-color: var(--bleu-marine-fonce);
+    --bs-btn-disabled-border-color: var(--bleu-marine-fonce);
+}
+
+.bouton-de-fermeture, .bouton-de-fermeture-modal {
+    background-color: var(--blanc-pur);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--rouge-cerise);
+    box-shadow: 0 3px 8px var(--noir-transparent);
+    transition: 0.3s ease;
+}
+
+.bouton-de-fermeture-modal {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
+.bouton-de-fermeture:hover, .bouton-de-fermeture-modal:hover {
+    background-color: var(--rouge-cerise);
+    color: var(--blanc-pur);
+}
+
+.bouton-d-action-rond {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.bouton-d-action-rond-bleu {
+    background: var(--bleu-nuit);
+    color: var(--blanc-pur);
+}
+
+.bouton-d-action-rond-bleu:hover {
+    background: var(--bleu-marine-fonce);
+}
+
+.bouton-d-action-rond-rouge {
+    background: var(--rouge-cerise);
+    color: var(--blanc-pur);
+}
+
+.bouton-d-action-rond-rouge:hover {
+    background: var(--rouge-cerise-fonce);
+}
+
+.bouton-d-action-rond-gris {
+    background: var(--gris-clair);
+    color: var(--noir-pur);
+}
+
+.bouton-d-action-rond-gris:hover {
+    background: var(--bleu-nuit);
+    color: var(--blanc-pur);
+}
+
+.bouton-de-couleur-grise {
+    background-color: var(--gris-clair);
+    color: var(--noir-pur);
+  	border-radius: 100px;
+  	padding: 8px 6px;
+    text-decoration: none;
+  	border: none;
+    transition: 0.3s ease;
+}
+
+.bouton-de-couleur-grise:hover, .bouton-de-couleur-grise:focus {
+    background-color: var(--noir-transparent);
+    color: var(--noir-pur);
+}
+
+.bouton-de-couleur-bleu {
+    background-color: var(--bleu-nuit);
+	color: var(--blanc-pur) !important;
+  	border-radius: 100px;
+  	padding: 8px 6px;
+    text-decoration: none;
+  	border: none;
+    transition: 0.3s ease;
+}
+
+.bouton-de-couleur-bleu:hover, .bouton-de-couleur-bleu:focus {
+    background-color: var(--bleu-marine-fonce) !important;
+	color: var(--blanc-pur) !important;
+}
+
+.bouton-de-couleur-rougeatre {
+    background-color: var(--rouge-cerise);
+	color: var(--blanc-pur);
+  	border-radius: 100px;
+  	padding: 8px 6px;
+    text-decoration: none;
+  	border: none;
+    transition: 0.3s ease;
+}
+
+.bouton-de-couleur-rougeatre:hover, .bouton-de-couleur-rougeatre:focus {
+    background-color: var(--rouge-cerise-fonce) !important;
+	color: var(--blanc-pur) !important;
+}
+
+.bouton-de-couleur-blanche {
+	background-color: var(--blanc-pur);
+	color: var(--noir-pur);
+  	border-radius: 100px;
+  	padding: 8px 6px;
+    text-decoration: none;
+  	border: none;
+    transition: 0.3s ease;
+}
+
+.bouton-de-couleur-blanche:hover, .bouton-de-couleur-blanche:focus {
+	background-color: var(--gris-clair);
+	color: var(--noir-pur);
+}
+
+/* Skeleton des différents composants */
+
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    background: var(--gris-fonce);
+    border-radius: 20px;
+}
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    height: 100%;
+    width: 150%;
+    background: linear-gradient(90deg, transparent, var(--gris-clair), transparent);
+    animation: shimmer 1.3s infinite;
+}
+
+@keyframes shimmer {
+
+    100% { 
+        left: 150%; 
+    }
+    
+}
+
+.skeleton-du-bouton-d-action-rond {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.skeleton-du-bouton {
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.skeleton-image-large {
+    width: 100%;
+    height: 320px;
+    border-radius: 20px;
+}
+
+.skeleton-image-col-6 {
+    aspect-ratio: 1 / 1;
+}
+
+.skeleton-image-col-12 {
+    aspect-ratio: 2 / 1;
+}
+
+.skeleton-suggestion {
+    height: 180px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+
+.skeleton-card:hover {
+    box-shadow: none !important;
+    transform: none !important;
+    cursor: auto !important;
+}
+
+.skeleton-avatar-90-pixels {
+    width: 90px;
+    height: 90px;
+    border-radius: 50% !important;
+    overflow: hidden;
+}
+
+.body-pages-post-connexion .skeleton-avatar-60-pixels {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.body-pages-post-connexion .skeleton-avatar-50-pixels {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.body-pages-post-connexion .skeleton-avatar-75-pixels {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%; 
+}
+
+.skeleton-text {
+    height: 14px;
+}
+
+.skeleton-text-180-pixels {
+    width: 180px;
+}
+
+.skeleton-text-120-pixels {
+    width: 120px;
+}
+
+.skeleton-text-50-pourcent {
+    width: 40%;
+}
+
+.skeleton-text-60-pourcent {
+    width: 60%;
+}
+
+.skeleton-text-70-pourcent {
+    width: 70%;
+}
+
+.skeleton-text-80-pourcent {
+    width: 80%;
+}
+
+.skeleton-text-90-pourcent {
+    width: 90%;
+}
+
+.skeleton-badge {
+    height: 28px;
+    width: 80px;
+    border-radius: 50px;
+}
+
+@media (max-width: 991px) {
+
+    .skeleton-image-large {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .skeleton-image-col-6, .skeleton-image-col-12 {
+        aspect-ratio: 4 / 5;
+    }
+
+    .skeleton-avatar-90-pixels {
+        width: 70px;
+        height: 70px;
+    }
+
 }
 
 /* Style de la page de chargement */
@@ -140,30 +540,6 @@ html, body {
 	background-color: var(--rouge-cerise);
 }
 
-.body-page-a-propos-de-nous a.btn {
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-}
-
-.body-page-a-propos-de-nous .button-de-couleur-blanche {
-	background-color: var(--blanc-pur);
-	color: var(--noir-pur);
-}
-
-.body-page-a-propos-de-nous .button-de-couleur-blanche:hover {
-	background-color: var(--gris-clair);
-}
-
-.body-page-a-propos-de-nous .button-de-couleur-bleu {
-	background-color: var(--bleu-nuit);
-	color: var(--blanc-pur);
-}
-
-.body-page-a-propos-de-nous .button-de-couleur-bleu:hover {
-	background-color: var(--bleu-marine-fonce);	
-}
-
 .body-page-a-propos-de-nous main img {
 	width: 100%;
   	height: 220px;
@@ -181,7 +557,6 @@ html, body {
 .body-pages-juridiques main p {
 	text-align: justify;
 	text-justify: inter-word;
-	hyphens: auto;
 }
 
 .body-pages-juridiques main a {
@@ -196,14 +571,6 @@ html, body {
 
 /* Style des pages d'authentification */
 
-.body-pages-authentification p {
-	hyphens: auto;
-}
-
-.body-pages-authentification .paragraphe-de-confirmation {
-	font-size: small;
-}
-
 .body-pages-authentification a {
 	text-decoration: none;
 	color: var(--bleu-nuit);
@@ -212,54 +579,6 @@ html, body {
 .body-pages-authentification a:hover {
 	text-decoration: underline;
 	cursor: pointer;
-}
-
-.body-pages-authentification .button-de-couleur-bleu {
-	background-color: var(--bleu-nuit);
-	color: var(--blanc-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-}
-
-.body-pages-authentification .button-de-couleur-bleu:hover {
-	background-color: var(--bleu-marine-fonce);	
-}
-
-.body-pages-authentification .bouton-de-visibilite-du-mot-de-passe {
-	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
-
-	/* Variables Bootstrap surchargées */
-
-	--bs-btn-color: var(--bleu-marine-fonce);
-    --bs-btn-border-color: var(--bleu-marine-fonce);
-    --bs-btn-hover-color: var(--blanc-pur);
-    --bs-btn-hover-bg: var(--bleu-marine-fonce);
-    --bs-btn-hover-border-color: var(--bleu-marine-fonce);
-    --bs-btn-active-color: var(--blanc-pur);
-    --bs-btn-active-bg: var(--bleu-marine-fonce);
-    --bs-btn-active-border-color: var(--bleu-marine-fonce);
-    --bs-btn-disabled-color: var(--bleu-marine-fonce);
-    --bs-btn-disabled-border-color: var(--bleu-marine-fonce);
-}
-
-.body-pages-authentification .form-control {
-	padding:14px;
-	border-radius:10px;
-    border: 0.1px solid var(--gris-clair) !important;
-    box-shadow: none !important;
-}
-
-.body-pages-authentification .form-control:focus {
-    border: 0.1px solid var(--bleu-marine-fonce) !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.body-pages-authentification .message-erreur {
-	font-size: small;
-	color: var(--rouge-cerise) !important;
 }
 
 .body-pages-authentification .bloc-gauche-ou-haut-de-couleur {
@@ -274,19 +593,15 @@ html, body {
 }
 
 .body-pages-authentification .bloc-gauche-ou-haut-de-couleur img {
-	max-width:250px;
+	max-width: 250px;
 }
 
 @media (max-width: 991px) {
-
-	/* Reduire le bloc de couleur */
 
 	.body-pages-authentification .bloc-gauche-ou-haut-de-couleur {
 		min-height: 30vh;   
 		padding: 20px;
 	}
-
-  	/* Reduire le logo du bloc de couleur */
 
 	.body-pages-authentification .bloc-gauche-ou-haut-de-couleur img {
 		max-width: 140px;
@@ -300,37 +615,12 @@ html, body {
     background-color: var(--blanc-pur);
 }
 
-.body-pages-post-connexion p {
-	hyphens: auto !important;
-}
-
 .body-pages-post-connexion .image-drapeau-de-pays {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 2px solid var(--blanc-pur);
     object-fit: cover;
-}
-
-.body-pages-post-connexion .bouton-de-fermeture {
-    background-color: var(--blanc-pur);
-    border: none;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--rouge-cerise);
-    box-shadow: 0 3px 8px var(--noir-transparent);
-    transition: all 0.2s ease;
-}
-
-.body-pages-post-connexion .bouton-de-fermeture:hover {
-    background-color: var(--rouge-cerise);
-    color: var(--blanc-pur);
-    transform: scale(1.1);
 }
 
 .body-pages-post-connexion .paragraphe-des-liens-juridiques a:hover {
@@ -346,6 +636,36 @@ html, body {
     border-radius: 50px;
     line-height: 1;
     box-shadow: 0 0 0 2px var(--blanc-pur);
+}
+
+.body-pages-post-connexion .point-de-statut-bleu {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background: var(--bleu-nuit);
+    display: inline-block;
+
+}
+
+.body-pages-post-connexion .point-de-statut-rouge {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background: var(--rouge-cerise);
+    display: inline-block;
+
+}
+
+.body-pages-post-connexion .point-de-statut-gris {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background: var(--gris-fonce);
+    display: inline-block;
+
 }
 
 .body-pages-post-connexion .bi-patch-check-fill {
@@ -367,29 +687,11 @@ html, body {
 
 .body-pages-post-connexion .badge-profil {
     background: var(--gris-fonce);
+    color: var(--noir-pur);
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 0.8rem;
     font-family: 'Poppins', sans-serif;
-}
-
-.body-pages-post-connexion .bouton-d-action-rond {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background: var(--bleu-nuit);
-    color: var(--blanc-pur);
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.25s ease;
-}
-
-.body-pages-post-connexion .bouton-d-action-rond:hover {
-    background: var(--bleu-marine-fonce);
-    transform: scale(1.1);
 }
 
 /* Blocs latéraux (Gauche et droit) */
@@ -445,7 +747,6 @@ html, body {
     background: var(--rouge-cerise);
     color: var(--blanc-pur) !important;
 }
-
 
 .body-pages-post-connexion .bloc-de-cote-droit .lien-de-navigation, .body-pages-post-connexion  #menu-complementaire-de-droite .lien-de-navigation {
     display: block;
@@ -710,13 +1011,6 @@ html, body {
     background: linear-gradient(transparent, var(--rouge-cerise));
 }
 
-.body-pages-post-connexion .bloc-modal-d-informations-du-profil .bouton-de-fermeture-modal {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 10;
-}
-
 @media (max-width: 991px) {
 
     .body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-image-wrapper {
@@ -725,78 +1019,6 @@ html, body {
 
     .body-pages-post-connexion .bloc-modal-d-informations-du-profil .modal-dialog {
         margin: 10px;
-    }
-
-}
-
-/* Style des skeletons des pages post connexion */
-
-.body-pages-post-connexion .skeleton {
-    position: relative;
-    overflow: hidden;
-    background: var(--gris-fonce);
-    border-radius: 20px;
-}
-
-.body-pages-post-connexion .skeleton::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -150%;
-    height: 100%;
-    width: 150%;
-    background: linear-gradient(90deg, transparent, var(--gris-clair), transparent);
-    animation: shimmer 1.3s infinite;
-}
-
-@keyframes shimmer {
-
-    100% { 
-        left: 150%; 
-    }
-    
-}
-
-/* Style des skeletons de la page Explotetris (Tetris) */
-
-.body-pages-post-connexion .col-6 .skeleton-image {
-    aspect-ratio: 1 / 1;
-}
-
-.body-pages-post-connexion .col-12 .skeleton-image {
-    aspect-ratio: 2 / 1;
-}
-
-@media (max-width: 991px) {
-
-    .body-pages-post-connexion .col-6 .skeleton-image, .body-pages-post-connexion .col-12 .skeleton-image {
-        aspect-ratio: 4 / 5;
-    }
-
-}
-
-/* Style des skeletons suggestions */
-
-.body-pages-post-connexion .skeleton-suggestion {
-    height: 180px;
-    border-radius: 18px;
-    margin-bottom: 15px;
-}
-
-.body-pages-post-connexion .fade-in {
-    animation: fadeInSmooth 0.5s ease forwards;
-}
-
-@keyframes fadeInSmooth {
-
-    from { 
-        opacity: 0; 
-        transform: translateY(10px);
-    }
-
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
     }
 
 }
@@ -865,84 +1087,12 @@ html, body {
 
 }
 
-/* Style des skeletons de la page de recherche */
-
-.body-pages-post-connexion .skeleton-card:hover {
-    box-shadow: none !important;
-    transform: none !important;
-    cursor: auto !important;
-}
-
-.body-pages-post-connexion .skeleton-avatar {
-    width: 90px;
-    height: 90px;
-    border-radius: 50% !important;
-    overflow: hidden;
-}
-
-.body-pages-post-connexion .skeleton-text {
-    height: 14px;
-}
-
-.body-pages-post-connexion .skeleton-text-180-pixels {
-    width: 180px;
-}
-
-.body-pages-post-connexion .skeleton-text-120-pixels {
-    width: 120px;
-}
-
-.body-pages-post-connexion .skeleton-text-50-pourcent {
-    width: 40%;
-}
-
-.body-pages-post-connexion .skeleton-text-60-pourcent {
-    width: 60%;
-}
-
-.body-pages-post-connexion .skeleton-text-70-pourcent {
-    width: 70%;
-}
-
-.body-pages-post-connexion .skeleton-text-80-pourcent {
-    width: 80%;
-}
-
-.body-pages-post-connexion .skeleton-text-90-pourcent {
-    width: 90%;
-}
-
-.body-pages-post-connexion .skeleton-badge {
-    height: 28px;
-    width: 80px;
-    border-radius: 50px;
-}
-
-@media (max-width: 991px) {
-
-    .body-pages-post-connexion .skeleton-avatar {
-        width: 70px;
-        height: 70px;
-    }
-    
-}
-
 /* Style de la page de consultation du profil d'un membre */
 
 .body-pages-post-connexion .bloc-d-informations-du-profil {
     background: var(--blanc-pur);
     border-radius: 20px;
     border: 1px solid var(--gris-clair);
-}
-
-.body-pages-post-connexion .bouton-d-action-sur-profil-membre {
-    background: var(--gris-clair);
-    color: var(--noir-pur);
-}
-
-.body-pages-post-connexion .bouton-d-action-sur-profil-membre:hover {
-    background: var(--bleu-nuit);
-    color: var(--blanc-pur);
 }
 
 .body-pages-post-connexion .image-de-album-photos {
@@ -963,29 +1113,6 @@ html, body {
 
     .body-pages-post-connexion .image-de-album-photos {
         height: 220px;
-    }
-
-}
-
-/* Style du skeleton de la page de consultation du profil d'un membre */
-
-.body-pages-post-connexion .skeleton-du-bouton-d-action-rond {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.body-pages-post-connexion .skeleton-image-large {
-    width: 100%;
-    height: 320px;
-    border-radius: 20px;
-}
-
-@media (max-width: 991px) {
-
-    .body-pages-post-connexion .skeleton-image-large {
-        height: auto;
-        aspect-ratio: 4 / 5;
     }
 
 }
@@ -1055,49 +1182,10 @@ html, body {
 
 }
 
-/* Style de modaux de confirmation */
-
-.body-pages-post-connexion .modal-de-confirmation {
-    border-radius: 20px;
-    border: none;
-}
-
-.body-pages-post-connexion .modal-de-confirmation .bouton-de-gauche {
-    background-color: var(--gris-clair);
-    color: var(--noir-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-}
-
-.body-pages-post-connexion .modal-de-confirmation .bouton-de-gauche:hover {
-    background-color: var(--noir-transparent);
-}
-
-.body-pages-post-connexion .modal-de-confirmation .bouton-de-droit {
-    background-color: var(--rouge-cerise);
-    color: var(--blanc-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-}
-
-.body-pages-post-connexion .modal-de-confirmation .bouton-de-droit:hover {
-    background-color: var(--rouge-cerise-fonce);
-}
-
-.body-pages-post-connexion .modal-de-confirmation .image-de-reference > img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-}
-
 /* Style de la page rencontres */
 
 .body-pages-post-connexion .section-du-milieu-avec-fond-image {
-    background-image: url("../img/fond_de_section7.jpg") !important;
+    background-image: url("../img/fond_de_section.webp") !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1126,9 +1214,11 @@ html, body {
 }
 
 @media (min-width: 992px) {
+
     .body-pages-post-connexion .body-de-la-section-du-milieu {
         padding-top: 100px;
     }
+    
 }
 
 .body-pages-post-connexion .encapsulateur-du-bloc-rencontre-a-droite {
@@ -1140,6 +1230,18 @@ html, body {
     display: flex;
     justify-content: left;
 } 
+
+.body-pages-post-connexion .encapsulateur-du-bloc-rencontre-au-centre {
+    display: flex;
+    justify-content: center;
+} 
+
+.body-pages-post-connexion .statut-de-la-rencontre {
+    background-color: var(--blanc-pur);
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: var(--noir-pur);
+}
 
 .body-pages-post-connexion .bloc-rencontre {
     background: var(--blanc-pur);
@@ -1155,45 +1257,6 @@ html, body {
 .body-pages-post-connexion .bloc-rencontre:hover {
     box-shadow: 0 8px 20px var(--noir-transparent);
     transform: translateY(-3px);
-}
-
-.body-pages-post-connexion .bloc-rencontre .bloc-des-boutons-d-actions .bouton-de-couleur-grise {
-    background-color: var(--gris-clair);
-    color: var(--noir-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-}
-
-.body-pages-post-connexion .bloc-rencontre .bloc-des-boutons-d-actions .bouton-de-couleur-grise:hover {
-    background-color: var(--noir-transparent);
-}
-
-.body-pages-post-connexion .bloc-rencontre .bloc-des-boutons-d-actions .bouton-de-couleur-bleu {
-    background-color: var(--bleu-nuit);
-	color: var(--blanc-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-}
-
-.body-pages-post-connexion .bloc-rencontre .bloc-des-boutons-d-actions .bouton-de-couleur-bleu:hover {
-    background-color: var(--bleu-marine-fonce);
-}
-
-.body-pages-post-connexion .bloc-rencontre .bloc-des-boutons-d-actions .bouton-de-couleur-rougeatre, .body-pages-post-connexion .bloc-rencontre .bouton-de-couleur-rougeatre {
-    background-color: var(--rouge-cerise);
-	color: var(--blanc-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-}
-
-.body-pages-post-connexion .bloc-rencontre .bloc-des-boutons-d-actions .bouton-de-couleur-rougeatre:hover, .body-pages-post-connexion .bloc-rencontre .bouton-de-couleur-rougeatre:hover {
-    background-color: var(--rouge-cerise-fonce);
 }
 
 .body-pages-post-connexion .bloc-rencontre .image-lieu-rencontre {
@@ -1231,54 +1294,6 @@ html, body {
     border: 1px solid var(--gris-clair);
 }
 
-.body-pages-post-connexion .bloc-rencontre #image-play-store, .body-pages-post-connexion .bloc-rencontre #image-app-store {
-    height: 40px;
-}
-
-.body-pages-post-connexion .formulaire-de-definitions-des-conditions-d-une-rencontre .form-control, .body-pages-post-connexion .formulaire-de-definitions-des-conditions-d-une-rencontre .form-select, .body-pages-post-connexion  .bloc-de-modification-informations form .form-control {
-	padding:14px;
-	border-radius:10px;
-    border: 0.1px solid var(--gris-clair) !important;
-    box-shadow: none !important;
-}
-
-.body-pages-post-connexion .formulaire-de-definitions-des-conditions-d-une-rencontre .form-control:focus, .body-pages-post-connexion  .bloc-de-modification-informations form .form-control:focus {
-    border: 0.1px solid var(--bleu-marine-fonce) !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.body-pages-post-connexion .formulaire-de-definitions-des-conditions-d-une-rencontre .message-erreur .body-pages-post-connexion  .bloc-de-modification-informations .message-erreur {
-	font-size: small;
-	color: var(--rouge-cerise) !important;
-}
-
-/* Style des skeletons de la page des rencontres */
-
-.body-pages-post-connexion .skeleton-button {
-    width: 120px;
-    height: 40px;
-    border-radius: 50px;
-}
-
-.body-pages-post-connexion .skeleton-avatar-60-pixels {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.body-pages-post-connexion .skeleton-avatar-50-pixels {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.body-pages-post-connexion .skeleton-avatar-75-pixels {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%; 
-}
-
 /* Style de la page transactions */
 
 .body-pages-post-connexion .bloc-transaction {
@@ -1306,36 +1321,6 @@ html, body {
     padding: 20px;
 }
 
-.body-pages-post-connexion .bloc-transaction .point-de-status-valide {
-    width: 8px;
-    height: 8px;
-    margin: 0 3px;
-    border-radius: 50%;
-    background: var(--bleu-nuit);
-    display: inline-block;
-
-}
-
-.body-pages-post-connexion .bloc-transaction .point-de-status-non-valide {
-    width: 8px;
-    height: 8px;
-    margin: 0 3px;
-    border-radius: 50%;
-    background: var(--rouge-cerise);
-    display: inline-block;
-
-}
-
-.body-pages-post-connexion .bloc-transaction .point-de-status-en-cours {
-    width: 8px;
-    height: 8px;
-    margin: 0 3px;
-    border-radius: 50%;
-    background: var(--gris-fonce);
-    display: inline-block;
-
-}
-
 /* Style de la page notification */
 
 .body-pages-post-connexion .bloc-notification {
@@ -1350,30 +1335,6 @@ html, body {
 .body-pages-post-connexion .bloc-notification:hover {
     box-shadow: 0 8px 20px var(--noir-transparent);
     transform: translateY(-3px);
-}
-
-.body-pages-post-connexion .bloc-notification .point-de-non-lu {
-    width: 8px;
-    height: 8px;
-    margin: 0 3px;
-    border-radius: 50%;
-    background: var(--bleu-nuit);
-    display: inline-block;
-
-}
-
-.body-pages-post-connexion .bloc-notification .bouton-acceder-a-la-ressource {
-    background-color: var(--bleu-nuit);
-	color: var(--blanc-pur) !important;
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-    text-decoration: none;
-}
-
-.body-pages-post-connexion .bloc-notification .bouton-acceder-a-la-ressource:hover {
-    background-color: var(--bleu-marine-fonce);
 }
 
 .body-pages-post-connexion .bloc-notification .header-notification {
@@ -1413,7 +1374,6 @@ html, body {
     color: var(--rouge-cerise);
 }
 
-
 /* Style de la page Mon profil */
 
 .body-pages-post-connexion .bloc-de-modification-informations {
@@ -1421,45 +1381,6 @@ html, body {
     color: var(--noir-pur);
     border-radius: 20px;
     border: 1px solid var(--gris-clair);
-}
-
-.body-pages-post-connexion .bloc-de-modification-informations .dropzone {
-    border: 1px solid var(--noir-pur) !important;
-    border-style: dashed !important;
-}
-
-.body-pages-post-connexion .bloc-de-modification-informations .dropzone .dz-preview .dz-image {
-    border-radius: 0px !important;
-}
-
-.body-pages-post-connexion .bloc-de-modification-informations button[type="submit"] {
-	background-color: var(--bleu-nuit);
-	color: var(--blanc-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-}
-
-.body-pages-post-connexion .bloc-de-modification-informations button[type="submit"]:hover {
-	background-color: var(--bleu-marine-fonce);	
-}
-
-.body-pages-post-connexion .bloc-de-modification-informations .bouton-de-visibilite-du-mot-de-passe {
-	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
-
-	/* Variables Bootstrap surchargées */
-
-	--bs-btn-color: var(--bleu-marine-fonce);
-    --bs-btn-border-color: var(--bleu-marine-fonce);
-    --bs-btn-hover-color: var(--blanc-pur);
-    --bs-btn-hover-bg: var(--bleu-marine-fonce);
-    --bs-btn-hover-border-color: var(--bleu-marine-fonce);
-    --bs-btn-active-color: var(--blanc-pur);
-    --bs-btn-active-bg: var(--bleu-marine-fonce);
-    --bs-btn-active-border-color: var(--bleu-marine-fonce);
-    --bs-btn-disabled-color: var(--bleu-marine-fonce);
-    --bs-btn-disabled-border-color: var(--bleu-marine-fonce);
 }
 
 /* Style de la page Mon album photos */
@@ -1474,26 +1395,23 @@ html, body {
 }
 
 .body-pages-post-connexion .bloc-image-de-album-photos button {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
-    padding: 0;
+    padding: 0px !important;
     cursor: pointer;
     background-color: var(--rouge-cerise);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    font-size: 20px;
+    height: 40px;
     color: var(--blanc-pur);
+    box-shadow: 0 3px 8px var(--noir-transparent);
+    transition: 0.3s ease;
 }
 
 .body-pages-post-connexion .bloc-image-de-album-photos button:hover {
     background-color: var(--rouge-cerise-fonce);
-}
-
-.body-pages-post-connexion .bloc-image-de-album-photos button i {
-    font-size: 20px;
+    color: var(--blanc-pur);
 }
 
 /* Style de la page portefeuille */
@@ -1509,32 +1427,6 @@ html, body {
     object-fit: cover;
 }
 
-.body-pages-post-connexion .bloc-informations-portefeuille .bloc-des-boutons-d-actions .bouton-de-couleur-grise {
-    background-color: var(--gris-clair);
-    color: var(--noir-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-}
-
-.body-pages-post-connexion .bloc-informations-portefeuille .bloc-des-boutons-d-actions .bouton-de-couleur-grise:hover {
-    background-color: var(--noir-transparent);
-}
-
-.body-pages-post-connexion .bloc-informations-portefeuille .bloc-des-boutons-d-actions .bouton-de-couleur-bleu {
-    background-color: var(--bleu-nuit);
-	color: var(--blanc-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-    transition: 0.3s ease;
-}
-
-.body-pages-post-connexion .bloc-informations-portefeuille .bloc-des-boutons-d-actions .bouton-de-couleur-bleu:hover {
-    background-color: var(--bleu-marine-fonce);
-}
-
 .body-pages-post-connexion .bloc-informations-portefeuille #logo-mtn-mobile-money{
     width: 110px;
     object-fit: cover;
@@ -1545,25 +1437,4 @@ html, body {
 .body-pages-post-connexion .bloc-certification {
     border: 1px solid var(--gris-clair);
     border-radius: 20px;
-}
-
-.body-pages-post-connexion .bloc-certification .dropzone {
-    border: 1px solid var(--noir-pur) !important;
-    border-style: dashed !important;
-}
-
-.body-pages-post-connexion .bloc-certification .dropzone .dz-preview .dz-image {
-    border-radius: 0px !important;
-}
-
-.body-pages-post-connexion .bloc-certification button[type="submit"] {
-	background-color: var(--bleu-nuit);
-	color: var(--blanc-pur);
-  	border-radius: 100px;
-  	padding: 8px 6px;
-  	border: none;
-}
-
-.body-pages-post-connexion .bloc-certification button[type="submit"]:hover {
-	background-color: var(--bleu-marine-fonce);	
 }
